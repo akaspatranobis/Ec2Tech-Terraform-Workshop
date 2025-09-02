@@ -1,0 +1,43 @@
+
+
+
+Terraform is declarative. You describe what you want, and Terraform figures out how to create it.”
+
+Terraform works with either JSON format or HCL (HasiCorp Configration Langugage)
+
+*.json or *.hcl
+
+1. 	1. Providers
+		○ “Providers are Terraform’s plugins to talk to cloud platforms like AWS, Azure, GCP.”
+		○ Example: AWS provider block.
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+
+2. Resources
+    ○ “Resources are the actual things you build: EC2, S3, VPC.”
+    ○ Example:
+
+resource "aws_instance" "demo" {
+  ami           = "ami-08c40ec9ead489470"
+  instance_type = "t2.micro"
+}
+
+resource "s3" "demo" {
+  
+}
+
+	3. Variables
+		○ “Variables make your code reusable. Imagine hardcoding region everywhere vs. defining once and reusing.”
+
+variable "region" {
+  default = "us-east-1"
+}
+
+
+4. How do you print anything on Terraform ?
+
+output " " {}
+
