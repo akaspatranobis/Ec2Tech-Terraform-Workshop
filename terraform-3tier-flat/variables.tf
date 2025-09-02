@@ -1,6 +1,6 @@
 variable "project" {
   type    = string
-  default = "ec2Tech-terraform-workshop"
+  default = "ec2tech-terraform-workshop"
 }
 
 variable "region" {
